@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>ВХОД | САМАЯ ПОТНАЯ ИГРА</title>
+    <style>
+        * { user-select: none; -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+        body {
+            background: #050505;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .login-screen {
+            text-align: center;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in;
+        }
+        h1 {
+            font-size: 1.2rem;
+            color: #ffd966;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(255, 217, 102, 0.5);
+        }
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            border: 3px solid #7a6a3a;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(122, 106, 58, 0.4);
+        }
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .start-btn {
+            background: linear-gradient(145deg, #7a6a3a, #4a3a1a);
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-family: inherit;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            text-transform: uppercase;
+        }
+        .start-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 217, 102, 0.3);
+        }
+        .start-btn:active {
+            transform: scale(0.95);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hidden { display: none; }
+
+        /* Стили основной игры из твоего кода */
+        .game-container {
+            background: #1a1f2a;
+            border-radius: 64px;
+            max-width: 550px;
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #7a6a3a;
+            text-align: center;
+            display: none; /* Скрыто по умолчанию */
+        }
+        /* ... тут должны быть остальные стили твоей игры (я их сохранил в скрипте ниже) ... */
+    </style>
+</head>
+<body>
+
+    <div id="loginScreen" class="login-screen">
+        <h1>самая потная игра в жизни каждого</h1>
+        <div class="photo-frame">
+            <img src="1000045055.jpg" alt="Потный чел">
+        </div>
+        <button class="start-btn" onclick="enterGame()">ВОЙТИ В IT</button>
+    </div>
+
+    <div id="mainGame" class="game-container">
+        <div id="characterSelect" class="character-select">
+            <h2>🍆 ВЫБЕРИ ПЕРСОНАЖА 🍆</h2>
+            <div class="characters">
+                <div class="char-btn" data-char="gaben"><span class="char-emoji">🎮👨</span><div><strong>ГАБЕН</strong><div class="char-stats">❤️2 макс | 🪙2 макс</div></div></div>
+                <div class="char-btn" data-char="gabenMother"><span class="char-emoji">🐷👩</span><div><strong>МАТЬ ГАБЕНА</strong><div class="char-stats">❤️2 старт</div></div></div>
+                <div class="char-btn" data-char="biden"><span class="char-emoji">🇺🇸👴</span><div><strong>ДЖО БАЙДЕН</strong><div class="char-stats">❤️5</div></div></div>
+                <div class="char-btn" data-char="trump"><span class="char-emoji">🇺🇸🍊</span><div><strong>ДОНАЛЬД ТРАМП</strong><div class="char-stats">❤️3</div></div></div>
+                <div class="char-btn" data-char="epstein"><span class="char-emoji">🏝️👔</span><div><strong>ЭПШТЕЙН</strong><div class="char-stats">❤️3</div></div></div>
+                <div class="char-btn" data-char="musk"><span class="char-emoji">🚀🧠</span><div><strong>ИЛОН МАСК</strong><div class="char-stats">❤️10</div></div></div>
+                <div class="char-btn" data-char="bandera"><span class="char-emoji">🇺🇦⚔️</span><div><strong>СТЕПАН БАНДЕРА</strong><div class="char-stats">❤️2</div></div></div>
+                <div class="char-btn" data-char="kuplinov"><span class="char-emoji">🍯🍔</span><div><strong>КУПЛИНОВ</strong><div class="char-stats">❤️4</div></div></div>
+            </div>
+        </div>
+        </div>
+
+    <script>
+        function enterGame() {
+            document.getElementById('loginScreen').style.display = 'none';
+            // Вставь здесь логику показа игры. 
+            // Чтобы не усложнять, самый простой способ — сделать редирект на саму игру 
+            // или просто скрыть экран входа и показать игровой блок.
+            window.location.href = "game.html"; // Если ты переименуешь игру в game.html
+            // Или просто:
+            // document.getElementById('mainGame').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
